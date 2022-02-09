@@ -1,0 +1,417 @@
+.App {
+  width: 99vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.post {
+  width: 400px;
+  height: 300px;
+  /* border-radius: 10px; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  border: 1px solid lightgray;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.post:last-child {
+  margin-bottom: 50px;
+}
+
+.post:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.post .title {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  flex: 20%;
+  border-bottom: 1px solid lightgray;
+  background-color: dodgerblue;
+  display: grid;
+  place-content: center;
+  color: white;
+}
+
+.post .body {
+  cursor: pointer;
+  flex: 60%;
+  display: grid;
+  place-content: center;
+  padding: 10px 10px;
+}
+
+.post .footer {
+  justify-content: space-between;
+  flex: 20% 0;
+  border-top: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+.post .footer .link-to-username {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  font-weight: bold;
+  transition: all .3s;
+}
+.post .footer .link-to-username:hover {
+  color: black
+}
+
+.post .actions {
+  display: flex;
+  gap: 10px;
+  flex-basis: 12%;
+  align-items: center;
+}
+
+.post .btn-like {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  width: 22%;
+  height: 100%;
+  cursor: pointer;
+
+  background: transparent;
+  border: 1px solid transparent;
+}
+.post .btn-like:hover {
+  background-color: #f2f3f5;
+  border: 1px solid #f2f3f5;
+}
+
+.post .material-btn-like {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  flex-basis: 30%;
+  background: #f2f3f5;
+  cursor: pointer;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+/* =================== CREATE POST PAGE CSS =================== */
+.createPostPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 5px solid dodgerblue;
+  border-radius: 5px;
+}
+
+.formContainer #inputCreatePost {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.formContainer button {
+  margin: 15px auto 0;
+  height: 40px;
+  border: none;
+  background-color: lightskyblue;
+  border-radius: 5px;
+  color: white;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 18px;
+}
+
+.formContainer button:hover {
+  cursor: pointer;
+  background-color: dodgerblue;
+}
+
+.formContainer span {
+  color: red;
+}
+
+.create-post-textarea {
+  resize: vertical;
+  height: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+/* NAVBAR Episode[5]*/
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: dodgerblue;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: black;
+}
+.navbar #btn-logout {
+  /* margin-left: auto;
+  margin-right: 2%; */
+
+  /* margin-left: 20px; */
+  cursor: pointer;
+  height: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  background: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+.navbar #btn-logout:hover {
+  color: black;
+}
+
+.navbar .loggedInContainer {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 10px;
+  gap: 10px;
+}
+
+.navbar .loggedInContainer #loggedInUsername {
+  display: inline-block;
+}
+
+/* INDIVIDUAL POST Episode[5] */
+.postPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+}
+
+.rightSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+}
+
+#individual {
+  /* height: 500px;
+  width: 600px; */
+  width: 70%;
+  height: 70%;
+}
+
+#individual .title,
+#individual .footer {
+  font-size: 30px;
+}
+
+#individual .body {
+  font-size: 25px;
+  display: grid;
+  place-content: center;
+}
+
+/* Episode[7]  Comments Section */
+.rightSide .addCommentContainer {
+  flex: 20%;
+  width: 95%;
+  /* display: grid;
+  place-items: center; */
+  display: flex;
+  margin-top: 25px;
+  background-color: antiquewhite;
+}
+
+.addCommentContainer input,
+.addCommentContainer button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+}
+
+.addCommentContainer button {
+  height: 64px;
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+  flex-basis: 20%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.addCommentContainer button:hover {
+  background-color: rgb(10, 119, 228);
+}
+.addCommentContainer input {
+  border: 2px solid dodgerblue;
+  outline: none;
+  flex-basis: 80%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rightSide .listOfComments {
+  flex: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listOfComments .comment {
+  width: 70%;
+  height: auto;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.listOfComments .comment .username {
+  font-weight: bold;
+  padding: 0 0 10px 0;
+}
+.listOfComments .comment .created-at {
+  font-size: small;
+  color: gray;
+}
+
+/* LOGIN Episode[8]*/
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  height: auto;
+  padding: 20px;
+  border: 5px solid dodgerblue;
+  border-radius: 5px;
+}
+
+.loginContainer input,
+.loginContainer button {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  margin: 10px;
+}
+
+.loginContainer button {
+  border: 2px solid dodgerblue;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.loginContainer button:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.loginContainer input {
+  outline: none;
+  border: 2px solid #ccc;
+}
+.loginContainer input:focus {
+  border-color: dodgerblue;
+}
+
+/* Table in Profile Page */
+.styled-table {
+  border-collapse: collapse;
+  margin: 10px 0 25px;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+  background-color: dodgerblue;
+  color: #ffffff;
+  text-align: left;
+}
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid dodgerblue;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.ProfilePageContainer .post:first-of-type {
+  margin-top: 10px;
+}

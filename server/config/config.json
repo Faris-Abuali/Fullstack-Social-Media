@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "pedrotech",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "dialectOptions": {
+    },
+    "timezone": "+02:00"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "sql11471320",
+    "password": "7Sj6a6yPz1",
+    "database": "sql11471320",
+    "host": "sql11.freemysqlhosting.net",
+    "dialect": "mysql"
+  }
+}
